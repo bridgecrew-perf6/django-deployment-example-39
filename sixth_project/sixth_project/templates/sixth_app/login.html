@@ -1,0 +1,17 @@
+{% extends 'sixth_app/base.html' %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Please login</h1>
+   <form action="{% url 'sixth_app:user_login' %}" method="post">
+     {% csrf_token %}
+     <label for="username">Username:</label>
+     <input type="text" name="username" value="">
+     <label for="password">Password:</label>
+     <input type="password" name="password" value="">
+     <button type="submit" name="button">Send</button>
+   </form>
+
+</div>
+{% endblock %}
